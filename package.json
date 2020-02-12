@@ -1,0 +1,20 @@
+{
+  "name": "odyssey-tinderbox-hacks",
+  "version": "1.0.0-pre",
+  "description": "A project generated from aunty's basic project template.",
+  "license": "MIT",
+  "private": true,
+  "contributors": [
+    "Colin Gourlay <gourlay.colin@abc.net.au>"
+  ],
+  "aunty": {
+    "type": "basic"
+  },
+  "scripts": {
+    "start": "aunty serve",
+    "test": "aunty test"
+  },
+  "devDependencies": {
+    "@abcnews/aunty": "^10.5.2"
+  }
+}

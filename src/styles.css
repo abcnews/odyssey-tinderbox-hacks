@@ -1,0 +1,71 @@
+/* Cold open */
+
+.cold-open-block {
+  margin-top: 0 !important;
+}
+
+:global(.is-piecemeal).cold-open-block > :global(.Block-content):not(:last-child) > * {
+  /* border-radius: 0.5rem; */
+  /* background-color: rgba(0, 0, 0, 0.5) !important; */
+  background-color: transparent !important;
+  font-size: 1.25rem !important;
+  text-align: center;
+  text-shadow: 0 0 0.25em rgba(0, 0, 0, 0.75) !important;
+}
+
+@media (min-width: 61.1875rem) {
+  :global(.is-piecemeal).cold-open-block > :global(.Block-content):not(:last-child) > * {
+    font-size: 1.625rem !important;
+  }
+}
+
+:global(.is-piecemeal).cold-open-block > :global(.Block-content):nth-child(2) > :first-child {
+  margin-top: 30vh !important;
+}
+
+:global(.is-piecemeal).cold-open-block > :global(.Block-content).cold-open-header {
+  padding-bottom: 0;
+  max-width: none;
+  min-height: 0;
+}
+
+:global(.is-piecemeal).cold-open-block > :global(.Block-content).cold-open-header > :last-child {
+  margin-bottom: -1px !important;
+}
+
+.cold-open-header {
+  text-align: center;
+}
+
+.cold-open-header > p {
+  padding-top: 0;
+}
+
+.cold-open-header > p:global(.Header-miscEl) {
+  font-size: 1.25rem !important;
+}
+
+.cold-open-header > p:not(:global(.Header-miscEl)) {
+  font-size: 1rem !important;
+}
+
+.cold-open-header > p:global(.Header-byline):not(:last-child) {
+  padding-bottom: 0;
+}
+
+/* Block media position (seamless double image effect) */
+
+a[name='mediapositionbottom'] + :global(.Block) :global(.Block-media) img {
+  object-position: bottom;
+}
+
+a[name='mediapositiontop'] + :global(.Block) :global(.Block-media) img {
+  object-position: top;
+}
+
+@media (max-width: 61.1875rem) {
+  .mini-map {
+    padding-left: 1.875rem !important;
+    padding-right: 1.875rem !important;
+  }
+}
