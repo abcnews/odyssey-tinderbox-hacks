@@ -4,6 +4,25 @@
   margin-top: 0 !important;
 }
 
+.cold-open-media > :first-child::after {
+  content: '';
+  position: absolute;
+  top: 1.25rem;
+  left: 1.25rem;
+  width: 48px;
+  height: 43px;
+  background-image: url(./panny-minimap.svg);
+}
+
+@media (min-width: 61.1875rem) {
+  .cold-open-media > :first-child::after {
+    width: 96px;
+    height: 86px;
+    top: 1.75rem;
+    left: 1.75rem;
+  }
+}
+
 :global(.is-piecemeal).cold-open-block > :global(.Block-content):not(:last-child) > * {
   background-color: transparent !important;
   font-size: 1.25rem !important;
@@ -64,9 +83,14 @@ a[name='mediapositiontop'] + :global(.Block) :global(.Block-media) img {
   object-position: top;
 }
 
+/* Mini maps */
+
+.mini-map {
+  max-width: 33.33333% !important;
+}
+
 @media (max-width: 61.1875rem) {
   .mini-map {
-    padding-left: 1.875rem !important;
-    padding-right: 1.875rem !important;
+    max-width: 233.333px !important;
   }
 }
