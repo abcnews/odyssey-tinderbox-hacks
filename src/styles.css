@@ -11,6 +11,7 @@
   text-align: center;
   text-shadow: 0 0 8px #000, 0 0 4px #000, 0 0 2px #000, 0 0 2px #000, 0 0 2px #000, 0 0 2px #000, 0 0 2px #000,
     0 0 2px #000, 0 0 2px #000, 0 0 2px #000, 0 0 2px #000, 0 0 2px #000, 0 0 2px #000, 0 0 2px #000 !important;
+  letter-spacing: 0.03125em;
 }
 
 @media (min-width: 61.1875rem) {
