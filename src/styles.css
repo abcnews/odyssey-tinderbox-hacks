@@ -5,12 +5,10 @@
 }
 
 :global(.is-piecemeal).cold-open-block > :global(.Block-content):not(:last-child) > * {
-  /* border-radius: 0.5rem; */
-  /* background-color: rgba(0, 0, 0, 0.5) !important; */
   background-color: transparent !important;
   font-size: 1.25rem !important;
   text-align: center;
-  text-shadow: 0 0 0.25em rgba(0, 0, 0, 0.75) !important;
+  text-shadow: 0 0 8px #000, 0 0 4px #000, 0 0 2px #000, 0 0 1px #000 !important;
 }
 
 @media (min-width: 61.1875rem) {
