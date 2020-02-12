@@ -5,10 +5,11 @@
 }
 
 :global(.is-piecemeal).cold-open-block > :global(.Block-content):not(:last-child) > * {
-  background-color: transparent !important;
+  background-color: rgba(0, 0, 0, 0.4) !important;
   font-size: 1.25rem !important;
   text-align: center;
-  text-shadow: 0 0 8px #000, 0 0 4px #000, 0 0 2px #000, 0 0 1px #000 !important;
+  text-shadow: 0 0 8px #000, 0 0 4px #000, 0 0 2px #000, 0 0 2px #000, 0 0 2px #000, 0 0 2px #000, 0 0 2px #000,
+    0 0 2px #000, 0 0 2px #000, 0 0 2px #000, 0 0 2px #000, 0 0 2px #000, 0 0 2px #000, 0 0 2px #000 !important;
 }
 
 @media (min-width: 61.1875rem) {
