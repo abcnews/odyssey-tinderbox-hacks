@@ -11,7 +11,8 @@ function initColdOpen() {
   coldOpenBlockMediaEl.classList.add(styles.coldOpenMedia);
 
   coldOpenHeaderEl.innerHTML = '';
-  coldOpenHeaderEl.classList.add('Header-content', styles.coldOpenHeader);
+  coldOpenHeaderEl.classList.add('Header-content');
+  coldOpenHeaderEl.classList.add(styles.coldOpenHeader);
   coldOpenHeaderEl.classList.remove('Block-content');
 
   Array.prototype.slice
