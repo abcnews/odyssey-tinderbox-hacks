@@ -26,7 +26,22 @@ function initColdOpen() {
 }
 
 function initBlockMediaPosition() {
-  // Handled by custom marker CSS
+  // CSS manages this, but the objectFitPolyfill Odyssey uses
+  // to support IE11 requires data-* attributes and a refresh
+
+  if (!window.objectFitPolyfill) {
+    return;
+  }
+
+  [...document.querySelectorAll('a[name="mediapositionbottom"] + .Block .Block-media img')].forEach(el => {
+    el.setAttribute('data-object-position', 'bottom');
+  });
+
+  [...document.querySelectorAll('a[name="mediapositiontop"] + .Block .Block-media img')].forEach(el => {
+    el.setAttribute('data-object-position', 'top');
+  });
+
+  window.objectFitPolyfill();
 }
 
 function initMiniMapMargin() {
