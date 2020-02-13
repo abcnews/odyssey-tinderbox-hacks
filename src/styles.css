@@ -49,6 +49,12 @@
   min-height: 0;
 }
 
+@media (max-width: 61.1875rem) {
+  :global(.is-piecemeal).cold-open-block > :global(.Block-content).cold-open-header {
+    width: auto;
+  }
+}
+
 :global(.is-piecemeal).cold-open-block > :global(.Block-content).cold-open-header > :last-child {
   margin-bottom: -1px !important;
 }
