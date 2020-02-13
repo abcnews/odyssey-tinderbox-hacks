@@ -33,15 +33,26 @@ function initBlockMediaPosition() {
     return;
   }
 
-  [...document.querySelectorAll('a[name="mediapositionbottom"] + .Block .Block-media img')].forEach(el => {
-    el.setAttribute('data-object-position', 'bottom');
+  function setPicturePosition(pictureEl, position) {
+    const imgEl = pictureEl.querySelector('img');
+
+    if (!imgEl) {
+      return;
+    }
+
+    imgEl.setAttribute('data-object-position', position);
+    window.objectFitPolyfill(imgEl);
+  }
+
+  [...document.querySelectorAll('a[name="mediapositionbottom"] + .Block .Block-media .Picture')].forEach(el => {
+    el.api.loadedHook = () => setPicturePosition(el, 'bottom');
+    el.api.loadedHook();
   });
 
-  [...document.querySelectorAll('a[name="mediapositiontop"] + .Block .Block-media img')].forEach(el => {
-    el.setAttribute('data-object-position', 'top');
+  [...document.querySelectorAll('a[name="mediapositiontop"] + .Block .Block-media .Picture')].forEach(el => {
+    el.api.loadedHook = () => setPicturePosition(el, 'top');
+    el.api.loadedHook();
   });
-
-  window.objectFitPolyfill();
 }
 
 function initMiniMapMargin() {
