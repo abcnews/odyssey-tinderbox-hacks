@@ -12,10 +12,11 @@ function initColdOpen() {
 
   coldOpenHeaderEl.innerHTML = '';
   coldOpenHeaderEl.classList.add('Header-content', styles.coldOpenHeader);
+  coldOpenHeaderEl.classList.remove('Block-content');
 
   Array.prototype.slice
     .call(headerContentEl.childNodes)
-    .forEach(node => node.tagName !== 'DIV' && coldOpenHeaderEl.appendChild(node.cloneNode(true)));
+    .forEach(node => coldOpenHeaderEl.appendChild(node.cloneNode(true)));
 
   coldOpenBlockEl.classList.add(styles.coldOpenBlock);
   coldOpenBlockEl.appendChild(coldOpenHeaderEl);
