@@ -46,7 +46,6 @@
 .cold-open-header {
   margin-top: 40vh;
   margin-bottom: 0;
-  padding-bottom: 0;
   max-width: none;
   min-height: 0;
   background-color: rgba(0, 0, 0, 0.8);
@@ -69,9 +68,12 @@
   padding-bottom: 0;
 }
 
-.cold-open-header > div,
-.cold-open-header > :last-child {
+.cold-open-header > div {
   margin-bottom: 0;
+}
+
+.cold-open-header > :last-child {
+  margin-bottom: -1px !important;
 }
 
 /* Block media position (seamless double image effect) */
