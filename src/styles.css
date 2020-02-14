@@ -68,12 +68,9 @@
   padding-bottom: 0;
 }
 
-.cold-open-header > div {
-  margin-bottom: 0;
-}
-
+.cold-open-header > div,
 .cold-open-header > :last-child {
-  margin-bottom: -1px !important;
+  margin-bottom: 0;
 }
 
 /* Block media position (seamless double image effect) */
