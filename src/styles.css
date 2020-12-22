@@ -75,11 +75,13 @@
 
 /* Block media position (seamless double image effect) */
 
-a[name='mediapositionbottom'] + :global(.Block) :global(.Block-media) img {
+[id='mediapositionbottom'] + :global(.Block) :global(.Block-media) img,
+[name='mediapositionbottom'] + :global(.Block) :global(.Block-media) img {
   object-position: bottom;
 }
 
-a[name='mediapositiontop'] + :global(.Block) :global(.Block-media) img {
+[id='mediapositiontop'] + :global(.Block) :global(.Block-media) img,
+[name='mediapositiontop'] + :global(.Block) :global(.Block-media) img {
   object-position: top;
 }
 

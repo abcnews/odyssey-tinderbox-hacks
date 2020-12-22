@@ -1,4 +1,5 @@
 import './polyfills';
+import { selectMounts } from '@abcnews/mount-utils';
 import styles from './styles.css';
 
 function initColdOpen() {
@@ -46,14 +47,16 @@ function initBlockMediaPosition() {
     window.objectFitPolyfill(imgEl);
   }
 
-  [...document.querySelectorAll('a[name="mediapositionbottom"] + .Block .Block-media .Picture')].forEach(el => {
-    el.api.loadedHook = () => setPicturePosition(el, 'bottom');
-    el.api.loadedHook();
-  });
-
-  [...document.querySelectorAll('a[name="mediapositiontop"] + .Block .Block-media .Picture')].forEach(el => {
-    el.api.loadedHook = () => setPicturePosition(el, 'top');
-    el.api.loadedHook();
+  ['top', 'bottom'].forEach(position => {
+    selectMounts(`mediaposition${position}`)
+      .map(el => el.nextElementSibling)
+      .filter(el => el.className.indexOf('Block') > -1)
+      .map(el => el.querySelector('.Block-media .Picture'))
+      .filter(el => el && el.api)
+      .forEach(el => {
+        el.api.loadedHook = () => setPicturePosition(el, position);
+        el.api.loadedHook();
+      });
   });
 }
 
